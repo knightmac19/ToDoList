@@ -1,6 +1,8 @@
 $(document).ready(() => {
     console.log('script ready!');
 
+    var todos = JSON.parse(localStorage.getItem('todos')) || [];
+
     var pageDate = $('#page-date');
     var pageTime = $('#page-time');
     
