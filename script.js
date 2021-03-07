@@ -4,18 +4,18 @@ $(document).ready(() => {
     var pageDate = $('#page-date');
     var pageTime = $('#page-time');
     
-    let rightNow = new Date().toString();
-    let date = rightNow.substring(0, 15);
-    let time = rightNow.substring(16, 24);
-
-    pageDate.text(date);
-    pageTime.text(time);
-
     const setDateTime = () => {
+        let rightNow = new Date().toString();
+        let date = rightNow.substring(0, 15);
+        let time = rightNow.substring(16, 24);
 
+        pageDate.text(date);
+        pageTime.text(time);
     }
 
-    console.log(rightNow);
+    setInterval(setDateTime, 1000);
+
+    
 
 });
 
