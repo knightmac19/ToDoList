@@ -51,7 +51,6 @@ $(document).ready(() => {
 
         pageDate.text(date);
         pageTime.text(time);
-        // currentHour = parseInt(time.substring(0 , 2));
         currentHour = parseInt(military.substring(0, 2));
         setColors();
     }
@@ -66,11 +65,9 @@ $(document).ready(() => {
         localStorage.setItem(`${key}`, input);
     });
 
-    
-
-    
-
-    
+    for (var i = 8; i < 21; i++) {
+        $(`#${i}`).children('textarea').val(localStorage.getItem(i));
+    }
 
 });
 
