@@ -1,8 +1,4 @@
 $(document).ready(() => {
-    console.log('script ready!');
-
-    var todos = JSON.parse(localStorage.getItem('todos')) || [];
-
     var pageDate = $('#page-date');
     var pageTime = $('#page-time');
     let currentHour = 0;
@@ -60,6 +56,15 @@ $(document).ready(() => {
 
     $('.save-btn').on('click', function() {
         let input = $(this).parent().siblings('textarea').val().trim();
+        let key = parseInt($(this).parent().parent()[0].id)
+        
+        localStorage.setItem(`${key}`, input);
+    });
+
+    $('.clear-this').on('click', function() {
+        $(this).parent().siblings('textarea').val('');
+
+        let input = '';
         let key = parseInt($(this).parent().parent()[0].id)
         
         localStorage.setItem(`${key}`, input);
