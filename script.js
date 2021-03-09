@@ -22,6 +22,7 @@ $(document).ready(() => {
         pageTime.text(time);
     }
 
+    setDateTime();
     setInterval(setDateTime, 1000);
 
     
