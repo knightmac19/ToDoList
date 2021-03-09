@@ -38,9 +38,12 @@ $(document).ready(() => {
     setDateTime();
     setInterval(setDateTime, 1000);
 
-    // $('.hour-block').each(() => {
-    //     console.log(this);
-    // })
+    $('.hour-block').each(function() {
+        let idHour = parseInt($(this)[0].id)
+        console.log(
+            idHour
+        );
+    })
 
     if (currentHour > 09) {
         console.log('greater')
