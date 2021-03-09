@@ -24,6 +24,15 @@ body {
     background-color: #6a15bf;
 }
 
+.present {
+    background-color: #6a15bf;
+} 
+
+.future {
+    background-color: #ba8fe5;
+}
+
+
 #footer {
     position: absolute;
     bottom: 0px;
