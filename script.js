@@ -65,6 +65,13 @@ $(document).ready(() => {
         localStorage.setItem(`${key}`, input);
     });
 
+    $('.clear-btn').on('click', function() {
+        localStorage.clear();
+        for (var i = 8; i < 21; i++) {
+            $(`#${i}`).children('textarea').val('');
+        }
+    });
+
     for (var i = 8; i < 21; i++) {
         $(`#${i}`).children('textarea').val(localStorage.getItem(i));
     }
