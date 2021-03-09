@@ -6,6 +6,30 @@ $(document).ready(() => {
     var pageDate = $('#page-date');
     var pageTime = $('#page-time');
     let currentHour = 0;
+
+    const setColors = () => {
+        $('.hour-block').each(function() {
+            let el = $(this)[0];
+            let idHour = parseInt(el.id)
+    
+            if (idHour < currentHour) {
+                $(this).children('textarea').removeClass('present future');
+                $(this).children('textarea').addClass('bg-secondary text-white');
+                // console.log(
+                //     el.children[1]
+                // )
+                
+            } 
+            if (idHour === currentHour) {
+                $(this).children('textarea').removeClass('bg-secondary future');
+                $(this).children('textarea').addClass('present text-white');
+            }
+            if (idHour > currentHour) {
+                $(this).children('textarea').removeClass('bg-secondary present text-white');
+                $(this).children('textarea').addClass('future');
+            }
+        })
+    }
     
     const setDateTime = () => {
         let rightNow = new Date();
@@ -33,24 +57,15 @@ $(document).ready(() => {
         pageTime.text(time);
         // currentHour = parseInt(time.substring(0 , 2));
         currentHour = parseInt(military.substring(0, 2));
+        setColors();
     }
 
     setDateTime();
     setInterval(setDateTime, 1000);
 
-    $('.hour-block').each(function() {
-        let idHour = parseInt($(this)[0].id)
-        console.log(
-            idHour
-        );
-    })
+    
 
-    if (currentHour > 09) {
-        console.log('greater')
-    } else {
-        console.log('less than')
-    }
-    console.log(currentHour);
+    
 
     
 

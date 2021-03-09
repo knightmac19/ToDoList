@@ -15,10 +15,7 @@ body {
     background: linear-gradient(to bottom, #6a15bf, #cfd7df);
 }
 
-.table-head {
-    background-color: #6a15bf;
-    color: white;
-}
+
 
 .save-btn {
     background-color: #6a15bf;
@@ -26,10 +23,12 @@ body {
 
 .present {
     background-color: #6a15bf;
+    
 } 
 
 .future {
     background-color: #ba8fe5;
+    
 }
 
 
