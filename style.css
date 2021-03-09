@@ -15,6 +15,15 @@ body {
     background: linear-gradient(to bottom, #6a15bf, #cfd7df);
 }
 
+.table-head {
+    background-color: #6a15bf;
+    color: white;
+}
+
+.btn {
+    background-color: #6a15bf;
+}
+
 #footer {
     position: absolute;
     bottom: 0px;
