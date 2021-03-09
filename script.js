@@ -15,10 +15,6 @@ $(document).ready(() => {
             if (idHour < currentHour) {
                 $(this).children('textarea').removeClass('present future');
                 $(this).children('textarea').addClass('bg-secondary text-white');
-                // console.log(
-                //     el.children[1]
-                // )
-                
             } 
             if (idHour === currentHour) {
                 $(this).children('textarea').removeClass('bg-secondary future');
@@ -62,6 +58,13 @@ $(document).ready(() => {
 
     setDateTime();
     setInterval(setDateTime, 1000);
+
+    $('.save-btn').on('click', function() {
+        let input = $(this).parent().siblings('textarea').val().trim();
+        let key = parseInt($(this).parent().parent()[0].id)
+        
+        localStorage.setItem(`${key}`, input);
+    });
 
     
 
