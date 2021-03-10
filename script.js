@@ -72,12 +72,12 @@ $(document).ready(() => {
 
     $('.clear-btn').on('click', function() {
         localStorage.clear();
-        for (var i = 8; i < 21; i++) {
+        for (var i = 8; i < 23; i++) {
             $(`#${i}`).children('textarea').val('');
         }
     });
 
-    for (var i = 8; i < 21; i++) {
+    for (var i = 8; i < 23; i++) {
         $(`#${i}`).children('textarea').val(localStorage.getItem(i));
     }
 
