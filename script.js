@@ -54,9 +54,9 @@ $(document).ready(() => {
     setDateTime();
     setInterval(setDateTime, 1000);
 
-    $('.save-btn').on('click', function() {
-        let input = $(this).parent().siblings('textarea').val().trim();
-        let key = parseInt($(this).parent().parent()[0].id)
+    $('.textarea').on('keyup', function() {
+        let input = $(this).val().trim();
+        let key = parseInt($(this).parent()[0].id)
         
         localStorage.setItem(`${key}`, input);
     });
