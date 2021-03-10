@@ -11,6 +11,10 @@ body {
     padding-bottom: 30px;
 }
 
+.time-hour {
+    font-size: 1.1rem;
+}
+
 .jumbotron {
     background: linear-gradient(to bottom, #6a15bf, #cfd7df);
 }
