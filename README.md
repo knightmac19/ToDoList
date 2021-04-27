@@ -45,9 +45,6 @@ While life may be very hectic a simple list of to-do's can reduce anxiety and al
 [Contents](#contents)  
 Users can `clone` the repo then open `index.html` in the browser or they may visit [this link](https://knightmac19.github.io/ToDoList/).
 
-## <a name="screenshots"></a> Screenshots
-[Contents](#contents)  
-
 ## <a name="challenges"></a> Challenges & Lessons Learned
 [Contents](#contents)  
 In order to dynamically style the textareas, the element `id's` needed to increment by one. In other words, the two `id's` for the 12pm and 1pm timeblocks had to be `12` and `13`, respectively. However, the current time displayed at the top of the page was displayed in 12-hour time. Therefore it was necessary to build two time objects -- one for military time and one for 12-hour time for running the conditional styling checks and displaying the current timestamp to the page.  
