@@ -35,6 +35,8 @@ Upon opening the [page](https://knightmac19.github.io/ToDoList/) users are prese
 
 The `<textarea>` element of each timeblocks is dynamically styled to represent its relationship to the current hour. Past timeblocks are given a gray background. The present timeblock receives a dark purple background, and future timeblocks are styled with light purple backgrounds. 
 
+![Main Page](https://github.com/knightmac19/ToDoList/blob/main/assets/browser_view.png)  
+
 ## <a name="motivation"></a> Motivation
 [Contents](#contents)  
 While life may be very hectic a simple list of to-do's can reduce anxiety and allow people to more efficiently use their time. This application features an intuitive and fully responsive interface that all users will be able to navigate on whichever device they choose.
@@ -48,7 +50,9 @@ Users can `clone` the repo then open `index.html` in the browser or they may vis
 
 ## <a name="challenges"></a> Challenges & Lessons Learned
 [Contents](#contents)  
-In order to dynamically style the textareas, the element `id's` needed to increment by one. In other words, the two `id's` for the 12pm and 1pm timeblocks had to be `12` and `13`, respectively. However, the current time displayed at the top of the page was displayed in 12-hour time. Therefore it was necessary to build two time objects -- one for military time and one for 12-hour time for running the conditional styling checks and displaying the current timestamp to the page.
+In order to dynamically style the textareas, the element `id's` needed to increment by one. In other words, the two `id's` for the 12pm and 1pm timeblocks had to be `12` and `13`, respectively. However, the current time displayed at the top of the page was displayed in 12-hour time. Therefore it was necessary to build two time objects -- one for military time and one for 12-hour time for running the conditional styling checks and displaying the current timestamp to the page.  
+
+![Military time function](https://github.com/knightmac19/ToDoList/blob/main/assets/set_date_time.png)  
 
 ## <a name="contributors"></a> Contributors
 [Contents](#contents)  
